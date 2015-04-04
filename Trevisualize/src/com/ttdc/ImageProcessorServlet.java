@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.appengine.api.users.User;
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
-import com.google.appengine.repackaged.com.google.common.base.StringUtil;
 
 public class ImageProcessorServlet extends HttpServlet {
     private static final Logger log = Logger.getLogger(ImageProcessorServlet.class.getName());
