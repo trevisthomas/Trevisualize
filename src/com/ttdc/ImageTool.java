@@ -26,7 +26,6 @@ import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 import com.google.appengine.api.images.ImagesServiceFactory;
 import com.google.appengine.api.users.User;
-import com.google.appengine.repackaged.com.google.common.base.StringUtil;
 
 public class ImageTool {
 	private static final Logger log = Logger.getLogger(ImageTool.class.getName());
@@ -210,7 +209,7 @@ public class ImageTool {
 		image.setDescription(description);
 		image.setPurchaseUrl(purchaseUrl);
 		
-		if(StringUtil.isEmptyOrWhitespace(id) ){
+		if(id == null || id.trim().isEmpty()){
 			UUID uuid = UUID.randomUUID();
 			id = uuid.toString();
 		}
